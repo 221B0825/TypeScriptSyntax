@@ -84,3 +84,6 @@ console.log(GameMulti.Paper);
 //열거형 값에 문자와 숫자 값을 혼합하여 사용할 수 있다.
 
 //8. 타입 별칭 & 인터페이스
+
+const food: string = 'banana';
+//const food: string = 1; error
