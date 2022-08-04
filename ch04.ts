@@ -20,3 +20,18 @@ function combine(fruit: Apple | Banana) {
   //fruit.age; (error/타입 오류)
   //fruit.character; (error/타입 오류)
 }
+//공통적인 속성에만 접근 가능하다.
+//이때 개별적인 속성에 접근하려면 유니온 타입 가드가 필요하다
+//유니온 타입 가드
+function combineUnionType(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 == "number" && typeof input2 == "number") {
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + input2.toString();
+  }
+  return result;
+}
+
+console.log(combineUnionType("hello", "world"));
+console.log(combineUnionType(10, 10));
