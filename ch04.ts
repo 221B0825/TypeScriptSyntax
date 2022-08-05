@@ -35,3 +35,16 @@ function combineUnionType(input1: number | string, input2: number | string) {
 
 console.log(combineUnionType("hello", "world"));
 console.log(combineUnionType(10, 10));
+
+//클래스 객체 식별
+
+class Apple {}
+class Banana {}
+
+// const combineClass(fruit: Apple|Banana){
+//   if(fruit instanceof Apple){
+//     fruit.apple(); //fruit 가 Apple 클래스의 객체
+//   }else{
+//     fruit.banana(); //fruit가 Banana 클래스의 객체
+//   }
+// }
