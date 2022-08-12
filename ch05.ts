@@ -34,3 +34,12 @@ console.log(sum(10, 20)); // result: 30
 function isChildren(age: number): boolean {
   return age < 19;
 }
+
+console.log(isChildren(47)); // result: false
+console.log(isChildren(5)); // result: true
+
+//반환 값이 없는 경우 void를 기재한다
+
+function sumVoid(number1: number, number2: number): void {
+  console.log(number1 + number2);
+}
