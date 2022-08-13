@@ -43,3 +43,18 @@ console.log(isChildren(5)); // result: true
 function sumVoid(number1: number, number2: number): void {
   console.log(number1 + number2);
 }
+
+//선택적 매개변수 `?`
+//아래의 예제는 JavaScript 문법으로 작성한 예시이다.
+function morningJava(name) {
+  return `Good morning ${name || "everyone"}`;
+}
+
+//console.log(morningJava()); //result: Good morning everyone
+
+function morningType(name?: string): string {
+  return `Good morning ${name || "everyone"}`;
+}
+
+console.log(morningType()); //result: Good morning everyone
+//여기서 주의할 점은, 선택적 매개변수가 필수 매개변수보다 앞에 위치하면 에러가 발생한다는 사실이다.
