@@ -58,3 +58,10 @@ function morningType(name?: string): string {
 
 console.log(morningType()); //result: Good morning everyone
 //여기서 주의할 점은, 선택적 매개변수가 필수 매개변수보다 앞에 위치하면 에러가 발생한다는 사실이다.
+
+function morningNameTime(name: string | undefined, time: number): string {
+  return `Good morning ${name || "everyone"}, Time is ${time || 8}.`;
+}
+
+//console.log(morningNameTime()) // Error
+console.log(morningNameTime("eunseo", 7)); // result: Good morning eunseo, Time is 7
