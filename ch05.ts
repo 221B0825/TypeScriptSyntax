@@ -65,3 +65,12 @@ function morningNameTime(name: string | undefined, time: number): string {
 
 //console.log(morningNameTime()) // Error
 console.log(morningNameTime("eunseo", 7)); // result: Good morning eunseo, Time is 7
+
+//매개변수 초기화
+//타입을 적어주는 것과 다른 방법으로 매개 변수를 선언할 때 값을 미리 초기화 할 수 있다
+
+function sumInit(a: number, b = 2022): number {
+  return a + b;
+}
+console.log(sumInit(10, undefined)); // result: 2032
+console.log(sumInit(10)); //result: 2032
