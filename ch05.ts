@@ -74,3 +74,11 @@ function sumInit(a: number, b = 2022): number {
 }
 console.log(sumInit(10, undefined)); // result: 2032
 console.log(sumInit(10)); //result: 2032
+
+//REST 문법이 적용된 매개변수
+//전개문법으로 받은 매개변수는 배열이기 때문에 타입을 배열로 받는다
+function sumREST(...numbers: number[]): number {
+  return numbers.reduce((result, number) => result + number, 0);
+}
+
+console.log(sumREST(10, 20, 30)); //result: 60
